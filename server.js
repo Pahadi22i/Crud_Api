@@ -3,14 +3,14 @@ const express = require("express");
 const mongoose =require("mongoose");
 const proudctRoute = require("./routes/productsRoutes");
 const errorMiddleware = require('./middleware/errorMiddleware')
-const cors = require("cors");
-
+const cors = require('cors');
+const app = express();
 
 const MONG_URL = process.env.MONGO_URL;
 const PORT = process.env.PORT || 3000
 
 
-const app = express();
+
 app.use(express.json());
 app.use(cors());
 
